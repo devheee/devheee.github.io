@@ -154,10 +154,10 @@ svg text {
 .b_right .desc h3::after {
     content: "";
     position: absolute;
-    top: -5px;
-    left: -5px;
-    border: 30px solid #000988;
-    border-right: 30px solid transparent;
+    top: -10px;
+    left: -10px;
+    border: 35px solid #000988;
+    border-right: 35px solid transparent;
     height: 0;
     width: 230px;
     z-index: -999;
