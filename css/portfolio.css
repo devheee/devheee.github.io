@@ -1,3 +1,21 @@
+/* .header {
+    position: fixed;
+    inset: 50px auto auto 50px;
+    z-index: 9999;
+}
+
+.header.on {
+    color: #fff;
+} */
+
+
+
+.slogan {
+    font-size: 14px;
+    margin: 300px 0 0 0;
+    font-family: 'Barlow', sans-serif;
+}
+
 .f_inner {
     display: flex;
     gap: 100px;
@@ -21,11 +39,6 @@
     height: 800px;
     border: 1px solid #a6c1ee;
 }
-
-/* .box02 {
-    width: 500px;
-    height: 500px;
-} */
 
 svg {
     font-family: 'Russo One', sans-serif;
@@ -71,57 +84,104 @@ svg text {
     }
 }
 
+.inner {}
 
 .inner::after {
     content: "";
     position: absolute;
     inset: 0 0 0 0;
-    clip-path: polygon(0 0, 50% 0, 60% 100%, 0% 100%);
+    clip-path: polygon(0 0, 43% 0, 50% 100%, 0% 100%);
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     z-index: -999;
 }
 
-.inner {
-    /* width: 1400px;
-    height: 700px;
+
+.b_left {
+    width: 1600px;
+    height: 800px;
     margin: 0 auto;
-    border-radius: 30px;
-    box-shadow: 0 0 10px #111;
-    background: #f9f9f9; */
 }
 
+.b_left .mokup img {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(0, -50%);
+    width: 1000px;
+}
 
-.item .mokup img {
-    margin: 40px 0 0 100px;
-    width: 900px;
+.b_left .homepage {
+    position: absolute;
+    top: 210px;
+    left: 150px;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.b_left .homepage .case {
+    transform: translate(0, 0);
+}
+
+.b_left .homepage:hover .case {
+    transform: translate(0, calc(-100% + 500px));
+    transition: 5s;
 }
 
 
 .b_right .desc {
 
     position: absolute;
-    inset: 35% auto auto 60%;
+    inset: 45% auto auto 60%;
     width: 100%;
 }
 
 .b_right .desc h3 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+    z-index: 9999;
+    color: #fff;
+}
+
+.b_right .desc h3::after {
+
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 40px solid #000a96;
+    border-right: 40px solid transparent;
+    height: 0;
+    width: 250px;
+    z-index: -999;
+}
+
+.b_right .desc p {
+    font-family: 'TheJamsil5Bold';
     font-size: 30px;
     margin: 0 0 50px 0;
 }
 
 .b_right .desc dt {
+    font-family: 'TheJamsil5Bold';
     float: left;
-    margin: 0 50px 0 0;
-    width: 50px;
+    margin: 0 50px 20px 0;
+    width: 100px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.b_right .desc dd {
+    font-size: 27px;
+    margin: 0 0 20px 0;
+    font-weight: 300;
 }
 
 
 
-.slogan {
-    font-size: 14px;
-    margin: 300px 0 0 0;
-    font-family: 'Barlow', sans-serif;
-}
+
 
 .section .content {
     transform: translate(-300px, 0);
@@ -163,50 +223,7 @@ svg text {
     opacity: 1;
 }
 
-.header {
-    position: fixed;
-    inset: 50px auto auto 50px;
-    z-index: 9999;
-}
 
-.header.on {
-    color: #fff;
-}
-
-.gnb {
-    position: fixed;
-    inset: 50% 50px auto auto;
-    transform: translate(0, -40px);
-    z-index: 9999;
-
-    width: 100px;
-}
-
-.gnb li {
-    font-size: 0;
-}
-
-.gnb li a {
-    position: relative;
-    display: block;
-    height: 10px;
-    margin: 5px 0;
-}
-
-.gnb li a::before {
-    content: "";
-    position: absolute;
-    inset: 50% 0 auto auto;
-    height: 1px;
-    width: 30px;
-    background: #333;
-    transition: 0.5s;
-}
-
-
-.gnb li.on a::before {
-    width: 50px;
-}
 
 .section {}
 
@@ -234,86 +251,4 @@ svg text {
 
 .cover ul {
     height: 100vh;
-}
-
-.toTop {
-    position: fixed;
-    inset: auto 50px 50px auto;
-    z-index: 999;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
-
-.mopen {
-    position: fixed;
-    inset: 65px 50px auto auto;
-    z-index: 999;
-
-    width: 15px;
-    height: 35px;
-    cursor: pointer;
-
-}
-
-.mopen::before,
-.mopen::after {
-    content: "";
-    position: absolute;
-    background: #333;
-    height: 5px;
-    border-radius: 50%;
-}
-
-.mopen::before {
-    inset: 5px 5px auto 5px;
-}
-
-.mopen::after {
-    inset: auto 5px 5px 5px;
-}
-
-.mopen button {
-    font-size: 0;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-
-
-
-.mopen button::before,
-.mopen button::after {
-    content: "";
-    position: absolute;
-    inset: 50% 5px auto 5px;
-    transform: translate(0, -50%);
-    background: #333;
-    height: 5px;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-
-.mopen.on::before,
-.mopen.on::after {
-    opacity: 0;
-    transition: 0.5s;
-}
-
-
-.mopen.on button::before {
-    border-radius: 0;
-    width: 30px;
-    transform: translate(-50%, -150%) rotate(45deg);
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.mopen.on button::after {
-    border-radius: 0;
-    width: 30px;
-    transform: translate(-50%, -150%) rotate(-45deg);
-    transition: 0.5s;
-    cursor: pointer;
 }
