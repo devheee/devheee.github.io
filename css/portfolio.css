@@ -84,7 +84,12 @@ svg text {
     }
 }
 
-.inner {}
+.inner {
+    width: 1650px;
+    margin: 0 auto;
+    height: 800px;
+    border: 1px solid #ddd;
+}
 
 .inner::after {
     content: "";
@@ -105,18 +110,18 @@ svg text {
 .b_left .mokup img {
     position: absolute;
     top: 50%;
-    left: 50px;
+    left: 150px;
     transform: translate(0, -50%);
-    width: 1000px;
+    width: 900px;
 
 }
 
 .b_left .homepage {
     position: absolute;
-    top: 210px;
-    left: 150px;
-    width: 800px;
-    height: 500px;
+    top: 235px;
+    left: 240px;
+    width: 710px;
+    height: 470px;
     overflow: hidden;
     border: 1px solid #ddd;
 }
@@ -139,7 +144,7 @@ svg text {
 
 .b_right .desc h3 {
     position: relative;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     margin: 0 0 40px 0;
     z-index: 9999;
@@ -149,18 +154,18 @@ svg text {
 .b_right .desc h3::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border: 40px solid #000988;
-    border-right: 40px solid transparent;
+    top: -5px;
+    left: -5px;
+    border: 30px solid #000988;
+    border-right: 30px solid transparent;
     height: 0;
-    width: 250px;
+    width: 230px;
     z-index: -999;
 }
 
 .b_right .desc p {
     font-family: 'TheJamsil5Bold';
-    font-size: 30px;
+    font-size: 27px;
     margin: 0 0 50px 0;
 }
 
@@ -169,12 +174,12 @@ svg text {
     float: left;
     margin: 0 50px 20px 0;
     width: 100px;
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 700;
 }
 
 .b_right .desc dd {
-    font-size: 21px;
+    font-size: 19px;
     margin: 0 0 20px 0;
     font-weight: 300;
 }
