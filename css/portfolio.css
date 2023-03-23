@@ -190,7 +190,7 @@ svg text {
 
 .container .b_left .homepage {
     position: absolute;
-    top: 235px;
+    top: 100px;
     left: 240px;
     width: 710px;
     height: 470px;
@@ -211,7 +211,7 @@ svg text {
 .container .b_right {
     color: #f9f9f9;
     position: absolute;
-    inset: 35% auto auto 60%;
+    inset: 30% auto auto 65%;
     width: 100%;
 }
 
