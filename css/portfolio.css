@@ -85,18 +85,6 @@
 
 
 
-/* .header {
-    position: fixed;
-    inset: 50px auto auto 50px;
-    z-index: 9999;
-}
-
-.header.on {
-    color: #fff;
-} */
-
-
-
 .slogan {
     color: #f9f9f9;
     font-size: 14px;
@@ -172,29 +160,26 @@ svg text {
     }
 }
 
-.inner {
+.container {
+    position: relative;
     width: 1650px;
     margin: 0 auto;
     height: 700px;
 }
 
-.inner::after {
-    content: "";
-    position: absolute;
-    inset: 0 0 0 0;
-    clip-path: polygon(0 0, 43% 0, 50% 100%, 0% 100%);
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-    z-index: -999;
+/* .pf_s {
+    position: relative;
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition: 0.5s;
 }
 
+.pf01 .slide.on.pf_s {
+    transform: translateY(0);
+    opacity: 1;
+} */
 
-.b_left {
-    width: 1600px;
-    height: 800px;
-    margin: 0 auto;
-}
-
-.b_left .mokup img {
+.container .b_left .mokup img {
     position: absolute;
     top: 50%;
     left: 150px;
@@ -203,7 +188,7 @@ svg text {
 
 }
 
-.b_left .homepage {
+.container .b_left .homepage {
     position: absolute;
     top: 235px;
     left: 240px;
@@ -213,24 +198,24 @@ svg text {
     border: 1px solid #ddd;
 }
 
-.b_left .homepage .case {
+.container .b_left .homepage .case {
     transform: translate(0, 0);
 }
 
-.b_left .homepage:hover .case {
+.container .b_left .homepage:hover .case {
     transform: translate(0, calc(-100% + 500px));
     transition: 5s;
 }
 
 
-.b_right {
+.container .b_right {
     color: #f9f9f9;
     position: absolute;
     inset: 35% auto auto 60%;
     width: 100%;
 }
 
-.b_right .desc h3 {
+.container .b_right .desc h3 {
     position: relative;
     font-size: 45px;
     font-weight: 700;
@@ -239,7 +224,7 @@ svg text {
     color: #fff;
 }
 
-.b_right .desc h3::after {
+.container .b_right .desc h3::after {
     content: "";
     position: absolute;
     top: -10px;
@@ -251,13 +236,13 @@ svg text {
     z-index: -999;
 }
 
-.b_right .desc p {
+.container .b_right .desc p {
     font-family: 'TheJamsil5Bold';
     font-size: 27px;
     margin: 0 0 50px 0;
 }
 
-.b_right .desc dt {
+.container .b_right .desc dt {
     font-family: 'TheJamsil5Bold';
     float: left;
     margin: 0 50px 20px 0;
@@ -266,14 +251,14 @@ svg text {
     font-weight: 700;
 }
 
-.b_right .desc dd {
+.container .b_right .desc dd {
     font-size: 19px;
     margin: 0 0 20px 0;
     font-weight: 300;
 }
 
 
-.b_right button {
+.container .b_right button {
     color: #f9f9f9;
     border: 1px solid #f9f9f9;
     background: transparent;
@@ -282,8 +267,8 @@ svg text {
     cursor: pointer;
 }
 
-.b_right button:hover {
-    background: #000988;
+.container .b_right button:hover {
+    background: #ddd;
     color: #fff;
     transition: 0.5s;
 }
@@ -291,7 +276,7 @@ svg text {
 
 
 
-
+/* 
 .section .content {
     transform: translate(-300px, 0);
     opacity: 0;
@@ -308,7 +293,7 @@ svg text {
     transform: translate(0, calc(-100% + 600px));
     transition: 5s;
 }
-
+ */
 
 
 

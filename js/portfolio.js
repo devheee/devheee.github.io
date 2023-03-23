@@ -1,4 +1,7 @@
 $(function () {
+    var $this = $(".section");
+    var $this_s = $(".slide");
+
     var fullpageOption = {
         anchors: [
             'main',
@@ -17,10 +20,27 @@ $(function () {
         afterRender: function () {
             $('.gnb li').eq(0).addClass('on')
             $('.section').eq(0).addClass('on')
+        },
+        afterLoad: function (destination) {
+            $this.eq(destination.index).addClass("on").siblings().removeClass("on");
+            if (destination.index == 1) {
+                $this_s.eq(0).addClass("on");
+            }
+            $this.eq(destination.index).addClass("on").siblings().removeClass("on");
         }
     }
 
     $('.main').fullpage(fullpageOption)
+
+    $('.pf01').on('mousewheel', function (e) {
+        if (e.originalEvent.wheelDelta > 0) {
+            $.fn.fullpage.moveSlideRight();
+        }
+        else {
+            console.log(12221)
+            $.fn.fullpage.moveSlideLeft();
+        }
+    });
 
     // function gnb () {
     // var gnbHeight = $('.gnb').height();
@@ -45,4 +65,6 @@ $(function () {
     $('.cover').on('wheel', function (e) {
         e.stopPropagation()
     })
+
+
 })
