@@ -27,7 +27,7 @@
     inset: 50% 0 auto auto;
     height: 1px;
     width: 30px;
-    background: #999;
+    background: #fff;
     transition: 0.5s;
 }
 
@@ -60,7 +60,7 @@
 .mopen::after {
     content: "";
     position: absolute;
-    background: #555;
+    background: #fff;
     height: 5px;
     border-radius: 50%;
 }
@@ -88,7 +88,7 @@
     position: absolute;
     inset: 50% 5px auto 5px;
     transform: translate(0, -50%);
-    background: #555;
+    background: #fff;
     height: 5px;
     border-radius: 50%;
     transition: 0.5s;
