@@ -3,6 +3,7 @@ $(function () {
     var $this_s = $(".slide");
 
     var fullpageOption = {
+        dots: true,
         controlArrows: false,
         loopHorizontal: false,
         anchors: [
@@ -24,13 +25,7 @@ $(function () {
             $('.gnb li').eq(0).addClass('on')
             $('.section').eq(0).addClass('on')
         },
-        // afterLoad: function (destination) {
-        //     $this.eq(destination.index).addClass("on").siblings().removeClass("on");
-        //     if (destination.index == 1) {
-        //         $this_s.eq(0).addClass("on");
-        //     }
-        //     $this.eq(destination.index).addClass("on").siblings().removeClass("on");
-        // }
+
     }
 
     $('.main').fullpage(fullpageOption)

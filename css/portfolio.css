@@ -1,5 +1,6 @@
+/* css animation */
 .waveDiv {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     margin: auto;
     top: 0;
@@ -12,7 +13,8 @@
 .wave-content-wrapper {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    inset: 0 0 0 0;
     overflow: hidden;
     bottom: -1px;
     background-image: linear-gradient(to top, #00607a 30%, #002029 90%);
@@ -35,7 +37,7 @@
 .wave-image {
     width: 200%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     background-repeat: repeat no-repeat;
     background-position: 0 bottom;
@@ -84,38 +86,6 @@
 }
 
 
-
-.slogan {
-    color: #f9f9f9;
-    font-size: 14px;
-    margin: 300px 0 0 0;
-    font-family: 'Barlow', sans-serif;
-    z-index: 9999;
-}
-
-.f_inner {
-    display: flex;
-    gap: 100px;
-    width: 1600px;
-    margin: 0 auto;
-}
-
-.f_inner>* {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 1650px;
-    height: 800px;
-}
-
 svg {
     font-family: 'Russo One', sans-serif;
     position: absolute;
@@ -160,6 +130,41 @@ svg text {
     }
 }
 
+/* 끝 */
+
+.slogan {
+    color: #f9f9f9;
+    font-size: 14px;
+    margin: 300px 0 0 0;
+    font-family: 'Barlow', sans-serif;
+    z-index: 9999;
+}
+
+.f_inner {
+    display: flex;
+    gap: 100px;
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.f_inner>* {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1650px;
+    height: 800px;
+}
+
+
+
 .container {
     position: relative;
     width: 1650px;
@@ -167,22 +172,11 @@ svg text {
     height: 700px;
 }
 
-/* .pf_s {
-    position: relative;
-    transform: translateY(-5rem);
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.pf01 .slide.on.pf_s {
-    transform: translateY(0);
-    opacity: 1;
-} */
 
 .container .b_left .mokup img {
     position: absolute;
     top: 50%;
-    left: 150px;
+    left: 100px;
     transform: translate(0, -50%);
     width: 900px;
 
@@ -191,7 +185,7 @@ svg text {
 .container .b_left .homepage {
     position: absolute;
     top: 100px;
-    left: 240px;
+    left: 190px;
     width: 710px;
     height: 470px;
     overflow: hidden;
@@ -213,6 +207,35 @@ svg text {
     position: absolute;
     inset: 30% auto auto 65%;
     width: 100%;
+}
+
+.container .b_right .desc {
+    position: relative;
+}
+
+.container .b_right .desc strong {
+    font-family: 'Libre Baskerville', serif;
+
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    font-size: 70px;
+    font-weight: 700;
+
+    border-radius: 50%;
+    z-index: 99999;
+}
+
+.container .b_right .desc strong::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: -8px;
+    left: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
 }
 
 .container .b_right .desc h3 {
@@ -268,8 +291,7 @@ svg text {
 }
 
 .container .b_right button:hover {
-    background: #ddd;
-    color: #fff;
+    background: url(../img/raster@2x.png) rgba(255, 255, 255, 0.3);
     transition: 0.5s;
 }
 
