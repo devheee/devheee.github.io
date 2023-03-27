@@ -197,7 +197,7 @@ svg text {
 }
 
 .container .b_left .homepage:hover .case {
-    transform: translate(0, calc(-100% + 500px));
+    transform: translate(0, calc(-100% + 467px));
     transition: 5s;
 }
 
@@ -214,29 +214,44 @@ svg text {
 }
 
 .container .b_right .desc strong {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Righteous', cursive;
 
     position: absolute;
-    top: -100px;
+    top: -145px;
     left: -50px;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 700;
-
+    text-shadow: 0 0 10px #333;
     border-radius: 50%;
     z-index: 99999;
 }
 
-.container .b_right .desc strong::after {
+.container .b_right .desc .num_one::before {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    bottom: -8px;
-    left: 8px;
+    bottom: -15px;
+    left: -3px;
     background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px #222;
     z-index: -1;
 }
+
+.container .b_right .desc strong::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    bottom: -15px;
+    left: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px #222;
+    z-index: -1;
+}
+
 
 .container .b_right .desc h3 {
     position: relative;
@@ -244,10 +259,12 @@ svg text {
     font-weight: 700;
     margin: 0 0 40px 0;
     z-index: 9999;
-    color: #fff;
+    color: #f9f9f9;
+    text-shadow: 0 0 10px #444;
 }
 
-.container .b_right .desc h3::after {
+
+.container .b_right .desc .site_01::after {
     content: "";
     position: absolute;
     top: -10px;
@@ -259,9 +276,58 @@ svg text {
     z-index: -999;
 }
 
+.container .b_right .desc .site_02::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 35px solid #d12f3a;
+    border-right: 35px solid transparent;
+    height: 0;
+    width: 240px;
+    z-index: -999;
+}
+
+.container .b_right .desc .site_03::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 35px solid #8c6239;
+    border-right: 35px solid transparent;
+    height: 0;
+    width: 210px;
+    z-index: -999;
+}
+
+.container .b_right .desc .site_04::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 35px solid #999;
+    border-right: 35px solid transparent;
+    height: 0;
+    width: 120px;
+    z-index: -999;
+}
+
+.container .b_right .desc .site_05::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 35px solid #f1d826;
+    border-right: 35px solid transparent;
+    height: 0;
+    width: 140px;
+    z-index: -999;
+}
+
 .container .b_right .desc p {
     font-family: 'TheJamsil5Bold';
-    font-size: 27px;
+    font-size: 25px;
+    font-weight: 300;
     margin: 0 0 50px 0;
 }
 
