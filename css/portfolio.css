@@ -209,6 +209,51 @@ svg text {
     width: 100%;
 }
 
+.container .b_right .desc {
+    position: relative;
+}
+
+.container .b_right .desc strong {
+    font-family: 'Righteous', cursive;
+
+    position: absolute;
+    top: -145px;
+    left: -50px;
+    font-size: 80px;
+    font-weight: 700;
+    text-shadow: 0 0 10px #333;
+
+    border-radius: 50%;
+    z-index: 99999;
+}
+
+.container .b_right .desc .num_one::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    bottom: -15px;
+    left: -3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px #222;
+    z-index: -1;
+}
+
+.container .b_right .desc strong::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    bottom: -15px;
+    left: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px #222;
+    z-index: -1;
+}
+
+
 .container .b_right .desc h3 {
     position: relative;
     font-size: 45px;
@@ -273,7 +318,7 @@ svg text {
     position: absolute;
     top: -10px;
     left: -10px;
-    border: 35px solid #f1d826;
+    border: 35px solid #e6cb01;
     border-right: 35px solid transparent;
     height: 0;
     width: 140px;
