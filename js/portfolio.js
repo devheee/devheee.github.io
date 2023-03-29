@@ -11,8 +11,7 @@ $(function () {
             'portfolio01',
             'portfolio02',
             'portfolio03',
-            'portfolio04',
-            'portfolio05'
+            'portfolio04'
         ],
 
         onLeave: function (origin, destination, direction) {

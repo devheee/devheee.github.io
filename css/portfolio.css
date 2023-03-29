@@ -423,6 +423,14 @@ svg text {
     border-radius: 10px;
 }
 
+.sec03 p {
+    font-family: 'PuradakGentleGothicR';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    color: #fff;
+}
 
 .cover {
     position: fixed;
