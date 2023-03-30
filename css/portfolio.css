@@ -379,7 +379,7 @@ svg text {
 .sec02 strong {
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 165px;
     font-size: 100px;
     font-weight: 700;
@@ -393,25 +393,25 @@ svg text {
     gap: 30px;
 }
 
-.f_inner>* {
+.f_inner figure .case {
+    position: relative;
+    overflow: hidden;
     flex: 1;
     height: 600px;
     width: 400px;
 }
 
-.f_inner .box {
-    position: relative;
 
-}
 
-.f_inner .box img {
+.f_inner figure .case img {
     height: 100%;
     object-fit: cover;
 
     border-radius: 10px;
+
 }
 
-.f_inner .box:hover::after {
+.f_inner figure:hover .case::after {
     content: "";
     position: absolute;
     inset: 0 0 0 0;
@@ -420,9 +420,87 @@ svg text {
     background: rgba(0, 0, 0, 0.7);
     opacity: 1;
     z-index: 9999;
+
     border-radius: 10px;
 }
 
+.f_inner figure .over01 {
+    position: absolute;
+    top: 28%;
+    left: 280px;
+    font-size: 20px;
+    color: #fff;
+    visibility: hidden;
+
+    font-family: 'SUIT-Regular';
+    border: 1px solid #f9f9f9;
+    padding: 150px 200px;
+}
+
+.f_inner figure .over02 {
+    position: absolute;
+    top: 28%;
+    right: 250px;
+    font-size: 20px;
+    color: #fff;
+    visibility: hidden;
+
+    font-family: 'SUIT-Regular';
+    border: 1px solid #f9f9f9;
+    padding: 150px 200px;
+}
+
+.f_inner figure:hover .over01 {
+    visibility: visible;
+    z-index: 9999;
+}
+
+.f_inner figure:hover .over02 {
+    visibility: visible;
+    z-index: 9999;
+}
+
+.f_inner figure .itm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.f_inner figure:hover .itm a {
+    border: 1px solid #f9f9f9;
+    color: #f9f9f9;
+    padding: 10px 20px;
+    outline: none;
+    background: transparent;
+    margin: 30px 0 0 0;
+}
+
+.f_inner figure:hover .itm a:hover {
+    background: url(../img/raster@2x.png) rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+
+.f_inner figure:hover .itm p {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+}
+
+.f_inner figure:hover .itm dt {
+    font-size: 17px;
+    font-weight: 700;
+    float: left;
+    width: 100px;
+}
+
+.f_inner figure:hover .itm dd {
+    font-size: 17px;
+    font-weight: 300;
+    float: left;
+}
+
+
+/*  */
 .sec03 p {
     font-family: 'PuradakGentleGothicR';
     display: flex;
