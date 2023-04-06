@@ -17,7 +17,7 @@
     inset: 0 0 0 0;
     overflow: hidden;
     bottom: -1px;
-    background-image: linear-gradient(to top, #00607a 30%, #002029 90%);
+    background-image: linear-gradient(to top, #242424 30%, #000303 90%);
 }
 
 .first-wave {
@@ -130,6 +130,272 @@ svg text {
     }
 }
 
+.constelacao {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate 600s infinite linear;
+}
+
+.estrela {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: estrela;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.estrela.style1 {
+    animation-duration: 0.5s;
+    animation-name: estrela;
+}
+
+.estrela.style2 {
+    animation-duration: 1s;
+    animation-name: estrela;
+}
+
+.estrela.style3 {
+    animation-duration: 1.5s;
+    animation-name: estrela;
+}
+
+.estrela.style4 {
+    animation-duration: 2s;
+    animation-name: estrelaDestacada;
+}
+
+.estrela.tam1 {
+    width: 1px;
+    height: 1px;
+}
+
+.estrela.tam2 {
+    width: 2px;
+    height: 2px;
+}
+
+.estrela.tam3 {
+    width: 3px;
+    height: 3px;
+}
+
+.estrela.opacity1 {
+    opacity: 1;
+}
+
+.estrela.opacity2 {
+    opacity: .5;
+}
+
+.estrela.opacity3 {
+    opacity: .1;
+}
+
+.meteoro {
+    position: absolute;
+    background-color: #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    transform: rotate(-35deg);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.meteoro:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 85px solid white;
+    position: absolute;
+    left: 2px;
+    top: 0;
+}
+
+.meteoro.style1 {
+    animation-name: meteoroStyle1;
+}
+
+.meteoro.style2 {
+    animation-name: meteoroStyle2;
+}
+
+.meteoro.style3 {
+    animation-name: meteoroStyle3;
+}
+
+.meteoro.style4 {
+    animation-name: meteoroStyle4;
+}
+
+@keyframes escurecer {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes estrela {
+    0% {
+        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+    }
+
+    50% {
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+    }
+}
+
+@keyframes estrelaDestacada {
+    0% {
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+    }
+
+    20% {
+        background-color: #FFC4C4;
+        box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1);
+    }
+
+    80% {
+        background-color: #C4CFFF;
+        box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1);
+    }
+
+    100% {
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes meteoroStyle1 {
+    0% {
+        opacity: 0;
+        right: 300px;
+        top: 100px;
+    }
+
+    30% {
+        opacity: .3;
+    }
+
+    60% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 0;
+        right: 1000px;
+        top: 600px;
+    }
+}
+
+@keyframes meteoroStyle2 {
+    0% {
+        opacity: 0;
+        right: 700px;
+        top: 100px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: 1400px;
+        top: 600px;
+    }
+}
+
+@keyframes meteoroStyle3 {
+    0% {
+        opacity: 0;
+        right: 300px;
+        top: 300px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: 1000px;
+        top: 800px;
+    }
+}
+
+@keyframes meteoroStyle4 {
+    0% {
+        opacity: 0;
+        right: 700px;
+        top: 300px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: 1400px;
+        top: 800px;
+    }
+}
+
+@keyframes lua {
+    0% {
+        box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+    }
+
+    50% {
+        box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+    }
+
+    100% {
+        box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
 /* 끝 */
 
 .slogan {
@@ -214,7 +480,7 @@ svg text {
 .container .b_right {
     color: #f9f9f9;
     position: absolute;
-    inset: 30% auto auto 65%;
+    inset: 28% auto auto 65%;
     width: 100%;
 }
 
@@ -228,15 +494,16 @@ svg text {
     font-family: 'Righteous', cursive;
 
     position: absolute;
-    top: -145px;
-    left: -50px;
-    font-size: 80px;
+    top: -105px;
+    right: 1040px;
+    font-size: 500px;
     font-weight: 700;
-    text-shadow: 0 0 10px #333;
+    -webkit-text-stroke: 1px #fff;
+    color: rgba(255, 255, 255, 0.1);
     z-index: 99999;
 }
 
-.container .b_right .desc .num_one::before {
+/* .container .b_right .desc .num_one::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -260,99 +527,108 @@ svg text {
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 0 10px #222;
     z-index: -1;
-}
+} */
 
 
 .container .b_right .desc h3 {
     position: relative;
-    font-size: 45px;
+    font-size: 55px;
     font-weight: 700;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
     z-index: 9999;
     color: #f9f9f9;
     text-shadow: 0 0 10px #444;
 }
 
+.container .b_right .desc h3::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -9;
+    width: 320px;
+    height: 20px;
+}
 
 .container .b_right .desc .site_01::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border: 35px solid #000988;
-    border-right: 35px solid transparent;
+    top: -30px;
+    left: -138px;
+    border: 10px solid #000988;
+    border-right: 10px solid transparent;
     height: 0;
-    width: 230px;
+    width: 15px;
     z-index: -999;
 }
 
 .container .b_right .desc .site_02::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border: 35px solid #d12f3a;
-    border-right: 35px solid transparent;
+    top: -30px;
+    left: -138px;
+    border: 10px solid #d12f3a;
+    border-right: 10px solid transparent;
     height: 0;
-    width: 240px;
+    width: 20px;
     z-index: -999;
 }
 
 .container .b_right .desc .site_03::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border: 35px solid #8c6239;
-    border-right: 35px solid transparent;
+    top: -30px;
+    left: -138px;
+    border: 10px solid #8c6239;
+    border-right: 10px solid transparent;
     height: 0;
-    width: 210px;
+    width: 20px;
     z-index: -999;
 }
 
 .container .b_right .desc .site_04::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border: 35px solid #999;
-    border-right: 35px solid transparent;
+    top: -30px;
+    left: -138px;
+    border: 10px solid #999;
+    border-right: 10px solid transparent;
     height: 0;
-    width: 120px;
+    width: 20px;
     z-index: -999;
 }
 
 .container .b_right .desc .site_05::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border: 35px solid #e6cb01;
-    border-right: 35px solid transparent;
+    top: -30px;
+    left: -138px;
+    border: 10px solid #e6cb01;
+    border-right: 10px solid transparent;
     height: 0;
-    width: 140px;
+    width: 20px;
     z-index: -999;
 }
 
 .container .b_right .desc p {
-    font-family: 'PuradakGentleGothicR';
-    font-size: 25px;
-    font-weight: 300;
+    font-family: 'SUIT-Regular';
+    font-size: 15px;
+    font-weight: 500;
     margin: 0 0 50px 0;
 }
 
 .container .b_right .desc dt {
     font-family: 'TheJamsil5Bold';
     float: left;
-    margin: 0 50px 20px 0;
+    margin: 0 0 12px 0;
     width: 100px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .container .b_right .desc dd {
-    font-size: 19px;
-    margin: 0 0 20px 0;
+    font-size: 14px;
+    margin: 0 0 12px 0;
     font-weight: 300;
 }
 
@@ -364,6 +640,7 @@ svg text {
     padding: 10px 20px;
     margin: 30px 0 0 0;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .container .b_right button:hover {
@@ -404,9 +681,10 @@ svg text {
 
 
 .f_inner figure .case img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
-
+    object-position: top;
     border-radius: 10px;
 
 }
@@ -427,14 +705,14 @@ svg text {
 .f_inner figure .over01 {
     position: absolute;
     top: 28%;
-    left: 280px;
+    left: 260px;
     font-size: 20px;
     color: #fff;
     visibility: hidden;
 
     font-family: 'SUIT-Regular';
     border: 1px solid #f9f9f9;
-    padding: 150px 200px;
+    padding: 100px 200px;
 }
 
 .f_inner figure .over02 {
@@ -487,15 +765,18 @@ svg text {
 }
 
 .f_inner figure:hover .itm dt {
+
     font-size: 17px;
     font-weight: 700;
     float: left;
+    margin: 0 0 10px 0;
     width: 100px;
 }
 
 .f_inner figure:hover .itm dd {
     font-size: 17px;
     font-weight: 300;
+    margin: 0 0 10px 0;
     float: left;
 }
 
@@ -570,7 +851,7 @@ svg text {
 .cover {
     position: fixed;
     inset: 0 0 auto 0;
-    background: #333;
+    background: #999;
     color: #ddd;
     z-index: 998;
 
@@ -582,6 +863,7 @@ svg text {
     height: 0;
     overflow: hidden;
     transition: 1s;
+    font-family: 'SUIT-Regular';
 }
 
 .cover.on {
@@ -590,4 +872,18 @@ svg text {
 
 .cover ul {
     height: 100vh;
+    margin-top: 30%;
+    /* transform: translate(140%, 20%); */
+}
+
+.cover ul li {
+    list-style: square;
+    font-size: 70px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.cover ul li:hover {
+    color: #002029;
+    transition: 1s;
 }
