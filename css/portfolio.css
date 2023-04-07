@@ -1,403 +1,3 @@
-/* css animation */
-.waveDiv {
-    position: fixed;
-    overflow: hidden;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -999;
-}
-
-.wave-content-wrapper {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    inset: 0 0 0 0;
-    overflow: hidden;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #242424 30%, #000303 90%);
-}
-
-.first-wave {
-    z-index: 3;
-    opacity: 0.5;
-}
-
-.second-wave {
-    z-index: 2;
-    opacity: 0.75;
-}
-
-.third-wave {
-    z-index: 1;
-}
-
-.wave-image {
-    width: 200%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-
-.first-image {
-    background-size: 50% 100px;
-}
-
-.animation-wave .first-image {
-    animation: move-wave 3s;
-    -webkit-animation: move-wave 3s;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-}
-
-.second-image {
-    background-size: 50% 120px;
-}
-
-.animation-wave .second-image {
-    animation: waves 10s linear infinite;
-}
-
-.third-image {
-    background-size: 50% 140px;
-}
-
-.animation-wave .third-image {
-    animation: waves 15s linear infinite;
-}
-
-@keyframes waves {
-    0% {
-        transform: translateX(0) scaleY(1);
-    }
-
-    50% {
-        transform: translateX(-25%) scaleY(0.55);
-    }
-
-    100% {
-        transform: translateX(-50%) scaleY(1);
-    }
-}
-
-
-svg {
-    font-family: 'Russo One', sans-serif;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-svg text {
-    text-transform: uppercase;
-    animation: stroke 5s forwards alternate;
-    stroke-width: 2;
-    stroke: #365fa0;
-    font-size: 120px;
-}
-
-@keyframes stroke {
-    0% {
-        fill: rgba(72, 138, 20, 0);
-        stroke: #a6c1ee;
-        stroke-dashoffset: 25%;
-        stroke-dasharray: 0 50%;
-        stroke-width: 2;
-    }
-
-    70% {
-        fill: rgba(72, 138, 20, 0);
-        stroke: #a6c1ee;
-    }
-
-    80% {
-        fill: rgba(72, 138, 20, 0);
-        stroke: #f9f9f9;
-        stroke-width: 3;
-    }
-
-    100% {
-        fill: #fff;
-        stroke: rgba(54, 95, 160, 0);
-        stroke-dashoffset: -25%;
-        stroke-dasharray: 50% 0;
-        stroke-width: 0;
-    }
-}
-
-.constelacao {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    animation: rotate 600s infinite linear;
-}
-
-.estrela {
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    animation-name: estrela;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.estrela.style1 {
-    animation-duration: 0.5s;
-    animation-name: estrela;
-}
-
-.estrela.style2 {
-    animation-duration: 1s;
-    animation-name: estrela;
-}
-
-.estrela.style3 {
-    animation-duration: 1.5s;
-    animation-name: estrela;
-}
-
-.estrela.style4 {
-    animation-duration: 2s;
-    animation-name: estrelaDestacada;
-}
-
-.estrela.tam1 {
-    width: 1px;
-    height: 1px;
-}
-
-.estrela.tam2 {
-    width: 2px;
-    height: 2px;
-}
-
-.estrela.tam3 {
-    width: 3px;
-    height: 3px;
-}
-
-.estrela.opacity1 {
-    opacity: 1;
-}
-
-.estrela.opacity2 {
-    opacity: .5;
-}
-
-.estrela.opacity3 {
-    opacity: .1;
-}
-
-.meteoro {
-    position: absolute;
-    background-color: #fff;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    transform: rotate(-35deg);
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-}
-
-.meteoro:before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    width: 0;
-    height: 0;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-left: 85px solid white;
-    position: absolute;
-    left: 2px;
-    top: 0;
-}
-
-.meteoro.style1 {
-    animation-name: meteoroStyle1;
-}
-
-.meteoro.style2 {
-    animation-name: meteoroStyle2;
-}
-
-.meteoro.style3 {
-    animation-name: meteoroStyle3;
-}
-
-.meteoro.style4 {
-    animation-name: meteoroStyle4;
-}
-
-@keyframes escurecer {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        top: 100%;
-    }
-}
-
-@keyframes estrela {
-    0% {
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
-    }
-
-    50% {
-        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
-    }
-
-    100% {
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
-    }
-}
-
-@keyframes estrelaDestacada {
-    0% {
-        background-color: #FFFFFF;
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
-    }
-
-    20% {
-        background-color: #FFC4C4;
-        box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1);
-    }
-
-    80% {
-        background-color: #C4CFFF;
-        box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1);
-    }
-
-    100% {
-        background-color: #FFFFFF;
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
-    }
-}
-
-@keyframes meteoroStyle1 {
-    0% {
-        opacity: 0;
-        right: 300px;
-        top: 100px;
-    }
-
-    30% {
-        opacity: .3;
-    }
-
-    60% {
-        opacity: .3;
-    }
-
-    100% {
-        opacity: 0;
-        right: 1000px;
-        top: 600px;
-    }
-}
-
-@keyframes meteoroStyle2 {
-    0% {
-        opacity: 0;
-        right: 700px;
-        top: 100px;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        right: 1400px;
-        top: 600px;
-    }
-}
-
-@keyframes meteoroStyle3 {
-    0% {
-        opacity: 0;
-        right: 300px;
-        top: 300px;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        right: 1000px;
-        top: 800px;
-    }
-}
-
-@keyframes meteoroStyle4 {
-    0% {
-        opacity: 0;
-        right: 700px;
-        top: 300px;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        right: 1400px;
-        top: 800px;
-    }
-}
-
-@keyframes lua {
-    0% {
-        box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
-    }
-
-    50% {
-        box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
-    }
-
-    100% {
-        box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
-    }
-}
-
-@keyframes rotate {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-/* 끝 */
-
 .slogan {
     color: #f9f9f9;
     font-size: 14px;
@@ -455,6 +55,7 @@ svg text {
     transform: translate(0, -50%);
     width: 900px;
 
+
 }
 
 .container .b_left .homepage {
@@ -465,15 +66,22 @@ svg text {
     height: 470px;
     overflow: hidden;
     border: 1px solid #ddd;
+    filter: grayscale(1);
 }
 
 .container .b_left .homepage .case {
     transform: translate(0, 0);
 }
 
+.container .b_left .homepage:hover {
+    filter: grayscale(0);
+    transition: 1s;
+}
+
 .container .b_left .homepage:hover .case {
     transform: translate(0, calc(-100% + 467px));
-    transition: 5s;
+    transition: 10s;
+
 }
 
 
@@ -494,12 +102,12 @@ svg text {
     font-family: 'Righteous', cursive;
 
     position: absolute;
-    top: -105px;
+    top: -60px;
     right: 1040px;
     font-size: 500px;
     font-weight: 700;
     -webkit-text-stroke: 1px #fff;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.2);
     z-index: 99999;
 }
 
@@ -550,7 +158,7 @@ svg text {
     height: 20px;
 }
 
-.container .b_right .desc .site_01::after {
+/* .container .b_right .desc .site_01::after {
     content: "";
     position: absolute;
     top: -30px;
@@ -608,7 +216,7 @@ svg text {
     height: 0;
     width: 20px;
     z-index: -999;
-}
+} */
 
 .container .b_right .desc p {
     font-family: 'SUIT-Regular';
@@ -686,7 +294,11 @@ svg text {
     object-fit: cover;
     object-position: top;
     border-radius: 10px;
+    filter: grayscale(1);
+}
 
+.f_inner figure:hover .case img {
+    filter: grayscale(0);
 }
 
 .f_inner figure:hover .case::after {
