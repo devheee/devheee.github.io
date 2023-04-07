@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 300vh;
+        }
+
+        .case {
+            position: fixed;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="case">
+        <div class="text"></div>
+    </div>
+    <script>
+        const C_TXT = document.querySelector('.case');
+        const I_TXT = document.querySelector('.text');
+        const TXT = 'Lorem^^*ipsumdolorsitamet';
+
+
+        const TC = t => {
+            const n = t.length;
+            const r = [...t].map(it => `<span>${it}</span>`).join('');
+
+            I_TXT.innerHTML = r;
+            const SPAN = document.querySelectorAll('.text span');
+            //console.log(t, n, r, SPAN);
+            SPAN.forEach((it, idx) => {
+                it.style.cssText = `
+                position: absolute;
+                top:0;
+                left: 50%;
+                transform: translate(-50%,0) rotate(${360 / n * idx}deg);
+                transform-origin: center bottom;
+                height: 50%;
+                width: 20px;
+                font-size: 40px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                color : #ddd;
+                `
+            });
+        }
+
+        TC(TXT);
+
+        const RT = e => {
+            let SCT = window.scrollY;
+            //console.log(e, SCT);
+            C_TXT.style.cssText = `
+            transform: translate(-50%, -50%) rotate(${SCT / 5}deg);
+            `
+        }
+        window.addEventListener('scroll', RT);
+
+    </script>
+</body>
+
+</html>
