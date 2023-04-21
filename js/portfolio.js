@@ -57,9 +57,7 @@ $(function () {
         anchors: [
             'main',
             'portfolio01',
-            'portfolio02',
-            'portfolio03',
-            'portfolio04'
+            'portfolio02'
         ],
 
         onLeave: function (origin, destination, direction) {
@@ -109,52 +107,6 @@ $(function () {
     $('.cover').on('wheel', function (e) {
         e.stopPropagation()
     })
-
-    // 숫자 돌아가는거
-
-    // const C_TXT = document.querySelector('.b_right .desc strong');
-    // const I_TXT = document.querySelector('.b_right .desc strong');
-    // const TXT = [1, 2, 3, 4, 5];
-
-
-    // const TC = t => {
-    //     const n = t.length;
-    //     const r = [...t].map(it => `<span>${it}</span>`).join('');
-
-    //     I_TXT.innerHTML = r;
-    //     const SPAN = document.querySelectorAll('.b_right .desc strong');
-    //     //console.log(t, n, r, SPAN);
-    //     SPAN.forEach((it, idx) => {
-    //         it.style.cssText = `
-    //         position: absolute;
-    //         top: -60px;
-    //         right: 1040px;
-    //         transform: translate(-50%,0) rotate(${360 / n * idx}deg);
-    //         transform-origin: center bottom;
-    //         height: 50%;
-    //         width: 20px;
-    //         font-size: 1000px;
-    //         font-weight: bolder;
-    //         text-transform: uppercase;
-    //         font-weight: 700;
-    //         -webkit-text-stroke: 1px #fff;
-    //         color: rgba(255, 255, 255, 0.2);
-    //         `
-    //     });
-    // }
-
-    // TC(TXT);
-
-    // const RT = e => {
-    //     let SCT = window.scrollY;
-    //     //console.log(e, SCT);
-    //     C_TXT.style.cssText = `
-    //     transform: translate(-50%, -50%) rotate(${SCT / 5}deg);
-    //     `
-    // }
-    // window.addEventListener('scroll', RT);
-
-
 
 
 })
