@@ -17,7 +17,7 @@
     inset: 0 0 0 0;
     overflow: hidden;
     bottom: -1px;
-    background-image: linear-gradient(to top, #242424 30%, #000 90%);
+    background-image: linear-gradient(to top, #242424 20%, #000 90%);
 }
 
 .first-wave {
