@@ -61,12 +61,23 @@ header h1 {
     width: 900px;
 }
 
-.container .b_left .mokup02 img {
+.container .b_left .mokup02 {
     position: absolute;
     top: 70%;
     left: 850px;
     transform: translate(0, -50%);
     z-index: 9999;
+}
+
+
+.container .b_left .mobile {
+    position: absolute;
+    top: 52%;
+    left: 870px;
+    width: 130px;
+    height: 265px;
+    z-index: 99999;
+    overflow: hidden;
 }
 
 .container .b_left .homepage {
@@ -77,6 +88,15 @@ header h1 {
     height: 470px;
     overflow: hidden;
     border: 1px solid #ddd;
+}
+
+.container .b_left .mobile .case {
+    transform: translate(0, 0);
+}
+
+.container .b_left .mobile:hover .case {
+    transform: translate(0, calc(-100% + 275px));
+    transition: 5s;
 }
 
 .container .b_left .homepage .case {
